@@ -51,7 +51,6 @@ int main () {
    } person, person_copy;
 
    char myname[] = "Pierre de Fermat";
-   char dest[] = "University";
    n = 33;
 
    printf("\nOriginal memcpy:\n");
@@ -74,7 +73,24 @@ int main () {
 
    // =========================function 4 ===================
 
-   
+   n = 16;
+   s = 'F';
+   printf("\nOriginal memccpy:\n");
+   char src[] = "Pierre de Fermat";
+   char dst[] = "Linux Mint V03";
+   memccpy(&dst, &src, s, n);
+   printf("dest: %s\n", dst);
+   memccpy(&dst, &src, 'U', 30);
+   printf("dest: %s\n", dst);
+
+   printf("\nCreated memccpy:\n");
+   char src1[] = "Pierre de Fermat";
+   char dst1[] = "Linux Mint V03";
+   ft_memccpy(&dst1, &src1, s, n);
+   printf("dest: %s\n", dst1);
+   ft_memccpy(&dst1, &src1, 'U', 30);
+   printf("dest: %s\n", dst1);
+   printf("\n************************************\n");
 
    return(0);
 }
