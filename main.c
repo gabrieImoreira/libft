@@ -42,7 +42,9 @@ int main () {
    puts(str);
    
    printf("\n************************************\n");
-   // =========================function 2===================
+
+   // =========================function 3===================
+
    struct {
       char name[40];
       int age;
@@ -68,8 +70,11 @@ int main () {
    /* using memcpy to copy structure: */
    ft_memcpy (&person_copy, &person, sizeof(person));
    printf ("person_copy: %s, %d \n", person_copy.name, person_copy.age);
-
    printf("\n************************************\n");
+
+   // =========================function 4 ===================
+
+   
 
    return(0);
 }
