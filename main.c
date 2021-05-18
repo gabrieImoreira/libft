@@ -133,7 +133,33 @@ int main () {
    printf("\n************************************\n");
 
    // =========================function===================
+
+   printf("\nOriginal memcmp:\n");
+   char str1[15];
+   char str2[15];
+   int output;
+   memcpy(str1, "AB/0ZXZ", 7);
+   memcpy(str2, "AB/0/t/t/t/t/zXZ", 7);
+   output = memcmp(str1, str2, 6);
+   printf("output: %i\n", output);
+   output = memcmp(str1, str2, 2);
+   printf("output: %i\n", output);
+
+   printf("\nCreated memcmp:\n");
+   char ft_str1[15];
+   char ft_str2[15];
+   int ft_output;
+   ft_memcpy(ft_str1, "AB/0ZXZ", 7);
+   ft_memcpy(ft_str2, "AB/0/t/t/t/t/zXZ", 7);
+   ft_output = ft_memcmp(ft_str1, ft_str2, 6);
+   printf("output: %i\n", ft_output);
+   ft_output = ft_memcmp(ft_str1, ft_str2, 2);
+   printf("output: %i\n", ft_output);
+   printf("\n************************************\n");
+
    // =========================function===================
+
+   
    // =========================function===================
    // =========================function===================
    // =========================function===================

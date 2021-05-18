@@ -1,29 +1,34 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_memchr.c                                        :+:      :+:    :+:   */
+/*   ft_memcmp.c                                        :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: gantonio <gantonio@student.42sp.org.br>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2021/05/17 23:37:40 by gantonio          #+#    #+#             */
-/*   Updated: 2021/05/18 17:52:17 by gantonio         ###   ########.fr       */
+/*   Created: 2021/05/18 17:52:27 by gantonio          #+#    #+#             */
+/*   Updated: 2021/05/18 18:28:23 by gantonio         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-void	*ft_memchr(const void *str, int c, size_t len)
+int	ft_memcmp(const void *str1, const void *str2, size_t len)
 {
 	size_t			i;
-	unsigned char	*ptr;
+	unsigned char	*ptr_str1;
+	unsigned char	*ptr_str2;
 
-	ptr = (unsigned char *)str;
+	ptr_str1 = (unsigned char *)str1;
+	ptr_str2 = (unsigned char *)str2;
 	i = 0;
-	while (i < len)
-	{
-		if (ptr[i] == (unsigned char)c)
-			return (ptr + i);
+	while ((ptr_str1[i] == ptr_str2[i]) && i < len)
 		i++;
-	}
-	return (NULL);
+	if (i != len)
+	{
+		if (ptr_str1[i] - ptr_str2[i] > 1)
+			return (1);
+		else
+			return (-1);
+	}	
+	return (0);
 }
