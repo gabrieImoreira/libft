@@ -1,6 +1,8 @@
 #include <stdio.h>
 #include <string.h>
+#include <bsd/string.h>
 #include "libft.h"
+
 
 int main () {
    //test variables 
@@ -173,7 +175,31 @@ int main () {
 
    // =========================function===================
 
+   char source[] = "Copy Source"; //11
+	char destn[] = "Destination0";
+
+	char source2[] = "Copy Source";
+	char destn2[] = "Destination0";
+
+	unsigned int n1 = 8;
+	int n2 = 8;
+
+	int tam1;
+	int tam2;
+
+   printf("\nstrlcpy\n");
+	tam2 = strlcpy(destn2, source2, n2);
+	printf("outputs: Source = %s e Destination = %s\n", source2, destn2);
+	printf("output:  Return size Source = %d\n", tam2);
+
+	printf("\nft_strlcpy:\n");
+	tam1 = ft_strlcpy(destn, source, n1);
+	printf("outputs: Source = %s e Destination = %s\n", source, destn);
+	printf("output:  Return size Source = %d\n", tam1);
+   printf("\n************************************\n");
+
    // =========================function===================
+   
    // =========================function===================
    // =========================function===================
    // =========================function===================
