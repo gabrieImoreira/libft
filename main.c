@@ -10,13 +10,13 @@ int main () {
    int n = 7;
 
    printf("************************************\n");
-   printf("\nOriginal memset:\n");
+   printf("\nmemset:\n");
    strcpy(str,"This is string.h library function");
    puts(str);
    memset(str,s,n);
    puts(str);
 
-   printf("\nCreated memset:\n");
+   printf("\nft_memset:\n");
    strcpy(str,"This is string.h library function");
    puts(str);
    ft_memset(str, s, n);
@@ -28,13 +28,13 @@ int main () {
    //test variables 
    n = 0;
 
-   printf("\nOriginal bzero:\n");
+   printf("\nbzero:\n");
    strcpy(str,"This is string.h library function");
    puts(str);
    bzero(str, n);
    printf("%s\n\n", str);
 
-   printf("Created bzero:\n");
+   printf("ft_bzero:\n");
    strcpy(str,"This is string.h library function");
    puts(str);
    ft_bzero(str, n);
@@ -52,7 +52,7 @@ int main () {
    char myname[] = "Pierre de Fermat";
    n = 33;
 
-   printf("\nOriginal memcpy:\n");
+   printf("\nmemcpy:\n");
    /* using memcpy to copy string: */
    memcpy (person.name, myname, n);
    //ft_memcpy(person.name, myname, 100);
@@ -61,7 +61,7 @@ int main () {
    memcpy (&person_copy, &person, sizeof(person));
    printf ("person_copy: %s, %d \n", person_copy.name, person_copy.age);
 
-   printf("\nCreated memcpy:\n");
+   printf("\nft_memcpy:\n");
    /* using memcpy to copy string: */
    ft_memcpy(person.name, myname, n);
    person.age = 46;
@@ -74,7 +74,7 @@ int main () {
 
    n = 16;
    s = 'F';
-   printf("\nOriginal memccpy:\n");
+   printf("\nmemccpy:\n");
    char src[] = "Pierre de Fermat";
    char dst[] = "Linux Mint V03";
    memccpy(&dst, &src, s, n);
@@ -82,7 +82,7 @@ int main () {
    memccpy(&dst, &src, 'U', 30);
    printf("dest: %s\n", dst);
 
-   printf("\nCreated memccpy:\n");
+   printf("\nft_memccpy:\n");
    char src1[] = "Pierre de Fermat";
    char dst1[] = "Linux Mint V03";
    ft_memccpy(&dst1, &src1, s, n);
@@ -93,7 +93,7 @@ int main () {
 
    // =========================function 4 ===================
    
-   printf("\nOriginal memmove:\n");
+   printf("\nmemmove:\n");
    char strt[] = "memmove can be very useful......";
    memmove(strt+20,strt+15,11);
    printf("output: %s\n",strt);
@@ -102,7 +102,7 @@ int main () {
    ft_memmove(dest3, src3, 10);
    printf("output SF: %s\n",dest3);
 
-   printf("\nCreated memmove:\n");
+   printf("\nft_memmove:\n");
    char ft_strt[] = "memmove can be very useful......";
    memmove(ft_strt+20,ft_strt+15,11);
    printf("output: %s\n",ft_strt);
@@ -113,7 +113,7 @@ int main () {
    printf("\n************************************\n");
 
    // =========================function===================
-   printf("\nOriginal memchr:\n");
+   printf("\nmemchr:\n");
    const char str4[] = "http://www.tutorialspoint.com";
    const char ch = '.';
    char *ret;
@@ -122,7 +122,7 @@ int main () {
    ret = memchr(str4, 'G', strlen(str4));
    printf("String after |G| is - |%s|\n", ret);
 
-   printf("\nCreated memchr:\n");
+   printf("\nft_memchr:\n");
    const char ft_str4[] = "http://www.tutorialspoint.com";
    const char ft_ch = '.';
    char *ft_ret;
@@ -134,7 +134,7 @@ int main () {
 
    // =========================function===================
 
-   printf("\nOriginal memcmp:\n");
+   printf("\nmemcmp:\n");
    char str1[15];
    char str2[15];
    int output;
@@ -145,7 +145,7 @@ int main () {
    output = memcmp(str1, str2, 2);
    printf("output: %i\n", output);
 
-   printf("\nCreated memcmp:\n");
+   printf("\nft_memcmp:\n");
    char ft_str1[15];
    char ft_str2[15];
    int ft_output;
@@ -159,8 +159,20 @@ int main () {
 
    // =========================function===================
 
-   
+   size_t len;
+	char *t = "papibaquígrafo\t\tis a brazi\0lian word";
+
+   printf("\nstrlen:\n");
+	len = strlen(t);
+	printf("output: |%s| has |%zu| characters\n", t, len);
+
+   printf("\nft_strlen:\n");
+	len = strlen(t);
+	printf("output: |%s| has |%zu| characters\n", t, len);
+   printf("\n************************************\n");
+
    // =========================function===================
+
    // =========================function===================
    // =========================function===================
    // =========================function===================
