@@ -112,17 +112,34 @@ int main () {
    printf("output SF: %s\n",ft_dest3);
    printf("\n************************************\n");
 
+   // =========================function===================
+   printf("\nOriginal memchr:\n");
    const char str4[] = "http://www.tutorialspoint.com";
    const char ch = '.';
    char *ret;
    ret = memchr(str4, ch, strlen(str4));
    printf("String after |%c| is - |%s|\n", ch, ret);
+   ret = memchr(str4, 'G', strlen(str4));
+   printf("String after |G| is - |%s|\n", ret);
 
+   printf("\nCreated memchr:\n");
    const char ft_str4[] = "http://www.tutorialspoint.com";
    const char ft_ch = '.';
    char *ft_ret;
    ft_ret = ft_memchr(ft_str4, ft_ch, strlen(ft_str4));
    printf("String after |%c| is - |%s|\n", ft_ch, ft_ret);
+   ft_ret = ft_memchr(ft_str4, 'G', strlen(ft_str4));
+   printf("String after |G| is - |%s|\n", ft_ret);
+   printf("\n************************************\n");
 
+   // =========================function===================
+   // =========================function===================
+   // =========================function===================
+   // =========================function===================
+   // =========================function===================
+   // =========================function===================
+   // =========================function===================
+   // =========================function===================
+   // =========================function===================
    return(0);
 }
