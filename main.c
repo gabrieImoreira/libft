@@ -1,6 +1,5 @@
 #include <stdio.h>
 #include <string.h>
-#include <string.h>
 #include "libft.h"
 
 int main () {
@@ -111,13 +110,19 @@ int main () {
 	char	ft_src3[] = "memmove can";
    ft_memmove(ft_dest3, ft_src3, 10);
    printf("output SF: %s\n",ft_dest3);
-   
-
-   
-
-   
-
    printf("\n************************************\n");
+
+   const char str4[] = "http://www.tutorialspoint.com";
+   const char ch = '.';
+   char *ret;
+   ret = memchr(str4, ch, strlen(str4));
+   printf("String after |%c| is - |%s|\n", ch, ret);
+
+   const char ft_str4[] = "http://www.tutorialspoint.com";
+   const char ft_ch = '.';
+   char *ft_ret;
+   ft_ret = ft_memchr(ft_str4, ft_ch, strlen(ft_str4));
+   printf("String after |%c| is - |%s|\n", ft_ch, ft_ret);
 
    return(0);
 }
