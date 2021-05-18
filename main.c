@@ -92,5 +92,32 @@ int main () {
    printf("dest: %s\n", dst1);
    printf("\n************************************\n");
 
+   // =========================function 4 ===================
+   
+   printf("\nOriginal memmove:\n");
+   char strt[] = "memmove can be very useful......";
+   memmove(strt+20,strt+15,11);
+   printf("output: %s\n",strt);
+   char	dest3[] = "lorem ipsum dolor sit amet";
+	char	src3[] = "memmove can";
+   ft_memmove(dest3, src3, 10);
+   printf("output SF: %s\n",dest3);
+
+   printf("\nCreated memmove:\n");
+   char ft_strt[] = "memmove can be very useful......";
+   memmove(ft_strt+20,ft_strt+15,11);
+   printf("output: %s\n",ft_strt);
+   char	ft_dest3[] = "lorem ipsum dolor sit amet";
+	char	ft_src3[] = "memmove can";
+   ft_memmove(ft_dest3, ft_src3, 10);
+   printf("output SF: %s\n",ft_dest3);
+   
+
+   
+
+   
+
+   printf("\n************************************\n");
+
    return(0);
 }
