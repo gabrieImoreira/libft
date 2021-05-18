@@ -199,7 +199,23 @@ int main () {
    printf("\n************************************\n");
 
    // =========================function===================
-   
+   	
+   char src4[] = "April 2021";
+	char dest4[] = "Ecole 42 basecamp";
+	char source1[] = "April 2021"; //10
+	char destn1[] = "Ecole 42 basecamp"; //17
+	n = 20;
+
+   printf("\nValue unsigned: %u\n", n);
+   printf("\nstrlcat:\n");
+	printf("output before: Source = |%s|  Destination = |%s| \n", src4, dest4);
+	output = strlcat(dest4, src4, n);
+	printf("output after:  Destination = |%s| Source Length: |%d|\n", dest4, output);
+
+	printf("\nft_strlcat:\n");
+	printf("output before: Source = |%s|  Destination = |%s| \n" , source1, destn1);
+	output = ft_strlcat(destn1, source1, n);
+	printf("output after:  Destination = |%s| Source Length: |%d|\n\n", destn1, output);
    // =========================function===================
    // =========================function===================
    // =========================function===================
