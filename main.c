@@ -1,6 +1,7 @@
 #include <stdio.h>
 #include <string.h>
 #include <bsd/string.h>
+#include <stdlib.h>
 #include "libft.h"
 
 
@@ -292,7 +293,24 @@ int main () {
 	printf("output: %d\n", ft_strncmp(f1, f2, 4));
    printf("output: %d\n", ft_strncmp(f1, f3, 4));
    printf("\n************************************\n");
+
    // =========================function===================
+
+   const char *str5 = " \n \t\f\r \v +1234b67asd";
+   const char *str6 = "-1+-41";
+   const char *str7 = " \n \t\f\r \v -\v1234b67asd";
+   
+
+   printf("\natoi:\n");
+   printf("output: %d\n", atoi(str5));
+   printf("output: %d\n", atoi(str6));
+   printf("output: %d\n", atoi(str7));
+
+   printf("\nft_atoi:\n");
+   printf("output: %d\n", ft_atoi(str5));
+   printf("output: %d\n", ft_atoi(str6));
+   printf("output: %d\n", ft_atoi(str7));
+   printf("\n************************************\n");
 
    // =========================function===================
    // =========================function===================
