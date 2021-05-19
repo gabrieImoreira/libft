@@ -2,6 +2,7 @@
 #include <string.h>
 #include <bsd/string.h>
 #include <stdlib.h>
+#include <ctype.h>
 #include "libft.h"
 
 
@@ -312,8 +313,33 @@ int main () {
    printf("output: %d\n", ft_atoi(str7));
    printf("\n************************************\n");
 
+// =========================function===================
+
+   printf("\nisupper:\n");
+   printf("output: %d\n", isupper('g'));
+   printf("output: %d\n", isupper('A'));
+   printf("output: %d\n", isupper('9'));
+
+   printf("\nft_isupper:\n");
+   printf("output: %d\n", ft_isupper('g'));
+   printf("output: %d\n", ft_isupper('A'));
+   printf("output: %d\n", ft_isupper('9'));
+   printf("\n************************************\n");
+
    // =========================function===================
+
+   printf("\nislower:\n");
+   printf("output: %d\n", islower('g'));
+   printf("output: %d\n", islower('A'));
+   printf("output: %d\n", islower('9'));
+
+   printf("\nft_islower:\n");
+   printf("output: %d\n", ft_islower('g'));
+   printf("output: %d\n", ft_islower('A'));
+   printf("output: %d\n", ft_islower('9'));
    // =========================function===================
+
+   printf("\n************************************\n");
    // =========================function===================
    // =========================function===================
    // =========================function===================
