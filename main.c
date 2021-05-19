@@ -252,9 +252,30 @@ int main () {
    printf("String after |s| is - |%s|\n", ft_ret);
    ft_ret = ft_strrchr(ft_str4, 's');
    printf("String after |s| is - |%s|\n", ft_ret);
-
+   printf("\n************************************\n");
    
    // =========================function===================
+
+   const char *largestring = "Hoo Bar Bar Baz";
+   const char *smallstring = "oo\0";
+   const char *smallstring2 = "oo/\0";
+
+
+   n = 150;
+
+	char *ptr;
+
+	printf("\nstrnstr\n");
+	ptr = strnstr(largestring, smallstring, n);
+	printf("output: %s\n", ptr);
+   ptr = strnstr(largestring, smallstring2, n);
+	printf("output: %s\n", ptr);
+
+	printf("\nft_strnstr\n");
+	ptr  = ft_strnstr(largestring, smallstring, n);
+	printf("output: %s\n", ptr);
+   ptr  = ft_strnstr(largestring, smallstring2, n);
+	printf("output: %s\n", ptr);
    // =========================function===================
    // =========================function===================
    return(0);
