@@ -216,7 +216,24 @@ int main () {
 	printf("output before: Source = |%s|  Destination = |%s| \n" , source1, destn1);
 	output = ft_strlcat(destn1, source1, n);
 	printf("output after:  Destination = |%s| Source Length: |%d|\n\n", destn1, output);
+   printf("\n************************************\n");
+   
    // =========================function===================
+
+   //str4 = "http://www.tutorialspoint.com";
+   printf("\nstrchr:\n");
+   const char ch1 = '\0';
+   ret = strchr(str4, ch1);
+   printf("String after |%c| is -  |%s|\n", ch1, ret);
+    ret = strchr(str4, 's');
+    printf("String after |s| is - |%s|\n", ret);
+
+   printf("\nft_strchr:\n");
+   ft_ret = ft_strchr(str4, ch1);
+   printf("String after |%c| is -  |%s|\n", ch1, ft_ret);
+   ft_ret = ft_strchr(ft_str4, 's');
+   printf("String after |s| is - |%s|\n", ft_ret);
+   printf("\n************************************\n");
    // =========================function===================
    // =========================function===================
    // =========================function===================
