@@ -337,7 +337,18 @@ int main () {
    printf("output: %d\n", ft_islower('g'));
    printf("output: %d\n", ft_islower('A'));
    printf("output: %d\n", ft_islower('9'));
+   printf("\n************************************\n");
    // =========================function===================
+
+   printf("\nisalpha:\n");
+   printf("output: %d\n", isalpha('g'));
+   printf("output: %d\n", isalpha('A'));
+   printf("output: %d\n", isalpha('9'));
+
+   printf("\nft_isalpha:\n");
+   printf("output: %d\n", ft_isalpha('g'));
+   printf("output: %d\n", ft_isalpha('A'));
+   printf("output: %d\n", ft_isalpha('9'));
 
    printf("\n************************************\n");
    // =========================function===================
