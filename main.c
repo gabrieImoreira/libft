@@ -259,23 +259,48 @@ int main () {
    const char *largestring = "Hoo Bar Bar Baz";
    const char *smallstring = "oo\0";
    const char *smallstring2 = "oo/\0";
-
-
    n = 150;
 
 	char *ptr;
 
-	printf("\nstrnstr\n");
+	printf("\nstrnstr:\n");
 	ptr = strnstr(largestring, smallstring, n);
 	printf("output: %s\n", ptr);
    ptr = strnstr(largestring, smallstring2, n);
 	printf("output: %s\n", ptr);
 
-	printf("\nft_strnstr\n");
+	printf("\nft_strnstr:\n");
 	ptr  = ft_strnstr(largestring, smallstring, n);
 	printf("output: %s\n", ptr);
    ptr  = ft_strnstr(largestring, smallstring2, n);
 	printf("output: %s\n", ptr);
+   printf("\n************************************\n");
+   // =========================function===================
+
+   const char *f1 = "Abc";
+   const char *f2 = "AbC";
+   const char *f3 = "Ab";
+   n = 2;
+
+	printf("\nstrcmp:\n");
+	printf("output: %d\n", strncmp(f1, f2, n));
+	printf("output: %d\n", strncmp(f1, f2, 4));
+	printf("output: %d\n", strncmp(f1, f3, 4));
+
+   printf("\nft_strncmp\n");
+	printf("output: %d\n", ft_strncmp(f1, f2, n));
+	printf("output: %d\n", ft_strncmp(f1, f2, 4));
+   printf("output: %d\n", ft_strncmp(f1, f3, 4));
+   printf("\n************************************\n");
+   // =========================function===================
+
+   // =========================function===================
+   // =========================function===================
+   // =========================function===================
+   // =========================function===================
+   // =========================function===================
+   // =========================function===================
+   // =========================function===================
    // =========================function===================
    // =========================function===================
    return(0);
