@@ -101,7 +101,7 @@ int main () {
    printf("output: %s\n",strt);
    char	dest3[] = "lorem ipsum dolor sit amet";
 	char	src3[] = "memmove can";
-   ft_memmove(dest3, src3, 10);
+   memmove(dest3, src3, 10);
    printf("output SF: %s\n",dest3);
 
    printf("\nft_memmove:\n");
@@ -225,8 +225,8 @@ int main () {
    const char ch1 = '\0';
    ret = strchr(str4, ch1);
    printf("String after |%c| is -  |%s|\n", ch1, ret);
-    ret = strchr(str4, 's');
-    printf("String after |s| is - |%s|\n", ret);
+   ret = strchr(str4, 's');
+   printf("String after |s| is - |%s|\n", ret);
 
    printf("\nft_strchr:\n");
    ft_ret = ft_strchr(str4, ch1);
@@ -235,6 +235,25 @@ int main () {
    printf("String after |s| is - |%s|\n", ft_ret);
    printf("\n************************************\n");
    // =========================function===================
+
+   printf("\nstrrchr:\n");
+   const char ch2 = '\0';
+   ret = strrchr(str4, ch2);
+   printf("String after |%c| is -  |%s|\n", ch2, ret);
+   ret = strrchr(str4, 'G');
+   printf("String after |s| is - |%s|\n", ret);
+   ret = strrchr(str4, 'w');
+   printf("String after |s| is - |%s|\n", ret);
+
+   printf("\nft_strrchr:\n");
+   ft_ret = ft_strrchr(str4, ch2);
+   printf("String after |%c| is -  |%s|\n", ch2, ft_ret);
+   ft_ret = ft_strrchr(ft_str4, 'G');
+   printf("String after |s| is - |%s|\n", ft_ret);
+   ft_ret = ft_strrchr(ft_str4, 's');
+   printf("String after |s| is - |%s|\n", ft_ret);
+
+   
    // =========================function===================
    // =========================function===================
    // =========================function===================

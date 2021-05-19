@@ -1,26 +1,27 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_strchr.c                                        :+:      :+:    :+:   */
+/*   ft_strrchr.c                                       :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: gantonio <gantonio@student.42sp.org.br>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2021/05/18 20:41:23 by gantonio          #+#    #+#             */
-/*   Updated: 2021/05/18 22:48:31 by gantonio         ###   ########.fr       */
+/*   Created: 2021/05/18 22:08:52 by gantonio          #+#    #+#             */
+/*   Updated: 2021/05/18 22:53:20 by gantonio         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-char	*ft_strchr(const char *str, int c)
+char	*ft_strrchr(const char *str, int c)
 {
-	if (!c)
-		return ((char *)str + ft_strlen(str));
-	while (*str)
+	int	i;
+
+	i = ft_strlen(str);
+	while (i >= 0)
 	{
-		if (*str == c)
-			return ((char *)str);
-		str++;
+		if (str[i] == c)
+			return ((char *)str + i);
+		i--;
 	}
 	return (NULL);
 }
