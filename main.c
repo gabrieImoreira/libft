@@ -403,7 +403,21 @@ int main () {
    printf("\n************************************\n");
 
    // =========================function===================
+
+   printf("\ntoupper:\n");
+   printf("output: %c\n", toupper('z'));
+   printf("output: %c\n", toupper('Z'));
+   printf("output: %c\n", toupper('a'));
+
+   printf("\nft_toupper:\n");
+   printf("output: %c\n", ft_toupper('z'));
+   printf("output: %c\n", ft_toupper('Z'));
+   printf("output: %c\n", ft_toupper('a'));
+   printf("\n************************************\n");
+
    // =========================function===================
+
+   
    // =========================function===================
    // =========================function===================
    return(0);
