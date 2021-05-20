@@ -6,7 +6,7 @@
 /*   By: gantonio <gantonio@student.42sp.org.br>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/05/19 20:54:05 by gantonio          #+#    #+#             */
-/*   Updated: 2021/05/19 20:59:50 by gantonio         ###   ########.fr       */
+/*   Updated: 2021/05/19 21:09:55 by gantonio         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -18,4 +18,3 @@ int	ft_isdigit(int c)
 		return (1);
 	return (0);
 }
-

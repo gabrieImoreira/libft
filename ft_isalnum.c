@@ -1,20 +1,20 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_isupper.c                                       :+:      :+:    :+:   */
+/*   ft_isalnum.c                                       :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: gantonio <gantonio@student.42sp.org.br>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2021/05/19 20:08:59 by gantonio          #+#    #+#             */
-/*   Updated: 2021/05/19 20:54:11 by gantonio         ###   ########.fr       */
+/*   Created: 2021/05/19 21:04:53 by gantonio          #+#    #+#             */
+/*   Updated: 2021/05/19 21:10:07 by gantonio         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-int	ft_isupper(int c)
+int	ft_isalnum(int c)
 {
-	if (c > 64 && c < 91)
+	if (ft_isalpha(c) || ft_isdigit(c))
 		return (1);
 	return (0);
 }

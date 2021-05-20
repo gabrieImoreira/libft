@@ -349,8 +349,19 @@ int main () {
    printf("output: %d\n", ft_isalpha('g'));
    printf("output: %d\n", ft_isalpha('A'));
    printf("output: %d\n", ft_isalpha('9'));
-
    printf("\n************************************\n");
+
+    // =========================function===================
+
+   printf("\nisalnum:\n");
+   printf("output: %d\n", isalnum('g'));
+   printf("output: %d\n", isalnum('/'));
+   printf("output: %d\n", isalnum('9'));
+
+   printf("\nft_isalnum:\n");
+   printf("output: %d\n", ft_isalnum('g'));
+   printf("output: %d\n", ft_isalnum('/'));
+   printf("output: %d\n", ft_isalnum('9'));
    // =========================function===================
    // =========================function===================
    // =========================function===================
