@@ -366,15 +366,29 @@ int main () {
    // =========================function===================
 
    printf("\nisascii:\n");
-   printf("output: %d\n", isascii('g'));
+   printf("output: %d\n", isascii(127));
    printf("output: %d\n", isascii(128));
    printf("output: %d\n", isascii('9'));
 
    printf("\nft_isascii:\n");
-   printf("output: %d\n", ft_isascii('g'));
+   printf("output: %d\n", ft_isascii(127));
    printf("output: %d\n", ft_isascii(128));
    printf("output: %d\n", ft_isascii('9'));
+   printf("\n************************************\n");
+
    // =========================function===================
+
+   printf("\nisprint:\n");
+   printf("output: %d\n", isprint(127));
+   printf("output: %d\n", isprint(128));
+   printf("output: %d\n", isprint('9'));
+
+   printf("\nft_isprint:\n");
+   printf("output: %d\n", ft_isprint(127));
+   printf("output: %d\n", ft_isprint(128));
+   printf("output: %d\n", ft_isprint('9'));
+   printf("\n************************************\n");
+   
    // =========================function===================
    // =========================function===================
    // =========================function===================
