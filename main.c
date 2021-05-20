@@ -362,7 +362,18 @@ int main () {
    printf("output: %d\n", ft_isalnum('g'));
    printf("output: %d\n", ft_isalnum('/'));
    printf("output: %d\n", ft_isalnum('9'));
+   printf("\n************************************\n");
    // =========================function===================
+
+   printf("\nisascii:\n");
+   printf("output: %d\n", isascii('g'));
+   printf("output: %d\n", isascii(128));
+   printf("output: %d\n", isascii('9'));
+
+   printf("\nft_isascii:\n");
+   printf("output: %d\n", ft_isascii('g'));
+   printf("output: %d\n", ft_isascii(128));
+   printf("output: %d\n", ft_isascii('9'));
    // =========================function===================
    // =========================function===================
    // =========================function===================
