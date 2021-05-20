@@ -390,6 +390,18 @@ int main () {
    printf("\n************************************\n");
    
    // =========================function===================
+
+   printf("\ntolower:\n");
+   printf("output: %c\n", tolower('z'));
+   printf("output: %c\n", tolower('Z'));
+   printf("output: %c\n", tolower('a'));
+
+   printf("\nft_tolower:\n");
+   printf("output: %c\n", ft_tolower('z'));
+   printf("output: %c\n", ft_tolower('Z'));
+   printf("output: %c\n", ft_tolower('a'));
+   printf("\n************************************\n");
+
    // =========================function===================
    // =========================function===================
    // =========================function===================

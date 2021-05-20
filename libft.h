@@ -14,6 +14,7 @@ int		ft_isdigit(int c);
 int		ft_islower(int c);
 int		ft_isprint(int c);
 int 	ft_isupper(int c);
+int		ft_tolower(int c);
 int		ft_memcmp(const void *str1, const void *str2, size_t len);
 int		ft_strncmp(const char *s1, const char *s2, size_t n);
 size_t	ft_strlcat(char *dest, const char *src, size_t size);
