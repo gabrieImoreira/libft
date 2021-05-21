@@ -418,7 +418,12 @@ int main () {
    // =========================function===================
 
    char word[] = "University";
-   printf("output: %s\n", ft_substr(word, 1, 9));
+
+   printf("\nft_substr:\n");
+   printf("output: %s\n", ft_substr(word, 0, 10));
+   printf("output: %s\n", ft_substr(word, 5, 16));
+   printf("output: %s\n", ft_substr(word, 11, 9));
+   printf("\n************************************\n");
    
    // =========================function===================
    // =========================function===================
