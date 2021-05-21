@@ -6,11 +6,11 @@
 /*   By: gantonio <gantonio@student.42sp.org.br>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/05/19 20:39:55 by gantonio          #+#    #+#             */
-/*   Updated: 2021/05/19 20:40:32 by gantonio         ###   ########.fr       */
+/*   Updated: 2021/05/20 22:49:54 by gantonio         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "libft.h" 
+#include "libft.h"
 
 int	ft_islower(int c)
 {

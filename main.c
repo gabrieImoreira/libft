@@ -424,8 +424,8 @@ int main () {
    printf("output: %s\n", ft_substr(word, 5, 16));
    printf("output: %s\n", ft_substr(word, 11, 9));
    printf("\n************************************\n");
-   
    // =========================function===================
+
    // =========================function===================
    return(0);
 }
