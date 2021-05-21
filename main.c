@@ -425,7 +425,21 @@ int main () {
    printf("output: %s\n", ft_substr(word, 11, 9));
    printf("\n************************************\n");
    // =========================function===================
+	char	*strX = "Test string.";
+   char	*strXY = "Test string.";
+	char	*str_copy = "abc";
+	char	*str_copy1 = "abc";
 
+
+	printf("\nstrdup:\n");
+	str_copy = strdup(strX);
+	printf("input: %s | ", str_copy);
+	printf("output: %d\n", strcmp(strX, str_copy));
+
+	printf("\nft_strdup:\n");
+	str_copy1 = ft_strdup(strXY);
+	printf("input: %s | ", str_copy1);
+	printf("output: %d\n\n", strcmp(strXY, str_copy1));
    // =========================function===================
    return(0);
 }
