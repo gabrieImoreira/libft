@@ -9,6 +9,7 @@
 int main () {
    //test variables 
    
+   
    char str[50];
    char s = '7';
    int n = 7;
@@ -57,19 +58,15 @@ int main () {
    n = 33;
 
    printf("\nmemcpy:\n");
-   /* using memcpy to copy string: */
+   
    memcpy (person.name, myname, n);
-   //ft_memcpy(person.name, myname, 100);
    person.age = 46;
-   /* using memcpy to copy structure: */
    memcpy (&person_copy, &person, sizeof(person));
    printf ("person_copy: %s, %d \n", person_copy.name, person_copy.age);
 
    printf("\nft_memcpy:\n");
-   /* using memcpy to copy string: */
    ft_memcpy(person.name, myname, n);
    person.age = 46;
-   /* using memcpy to copy structure: */
    ft_memcpy (&person_copy, &person, sizeof(person));
    printf ("person_copy: %s, %d \n", person_copy.name, person_copy.age);
    printf("\n************************************\n");
@@ -417,6 +414,25 @@ int main () {
 
    // =========================function===================
 
+   char	*strX = "Test string.";
+	char	*str_copy;
+	char	*str_copy1;
+
+	printf("\nstrdup:\n");
+	str_copy = strdup(strX);
+	printf("input: %s | ", str_copy);
+	printf("output: %d\n", strcmp(strX, str_copy));
+
+	printf("\nft_strdup:\n");
+	str_copy1 = ft_strdup(strX);
+	printf("input: %s | ", str_copy1);
+	printf("output: %d\n", strcmp(strX, str_copy1));
+   printf("\n************************************\n");
+
+   // =========================function===================
+   printf("Part 2 - Additional functions:\n");
+   printf("************************************\n");
+
    char word[] = "University";
 
    printf("\nft_substr:\n");
@@ -425,21 +441,23 @@ int main () {
    printf("output: %s\n", ft_substr(word, 11, 9));
    printf("\n************************************\n");
    // =========================function===================
-	char	*strX = "Test string.";
-   char	*strXY = "Test string.";
-	char	*str_copy = "abc";
-	char	*str_copy1 = "abc";
+   
+   char *ft_fdest;  
+   printf("\nft_strjoin:\n");
+   ft_fdest = ft_strjoin("hello", " world");
+   printf("output: |%s|\n", ft_fdest);
+   printf("output: |%s|\n", ft_strjoin("42\t\0", "SP\t"));
+   printf("\n************************************\n");
 
 
-	printf("\nstrdup:\n");
-	str_copy = strdup(strX);
-	printf("input: %s | ", str_copy);
-	printf("output: %d\n", strcmp(strX, str_copy));
 
-	printf("\nft_strdup:\n");
-	str_copy1 = ft_strdup(strXY);
-	printf("input: %s | ", str_copy1);
-	printf("output: %d\n\n", strcmp(strXY, str_copy1));
+   // =========================function===================
+   // =========================function===================
+   // =========================function===================
+   // =========================function===================
+   // =========================function===================
+   // =========================function===================
+   // =========================function===================
    // =========================function===================
    return(0);
 }

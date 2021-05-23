@@ -6,8 +6,10 @@
 
 char	*ft_strcpy(char *dest, char *src);
 char	*ft_substr(char const *s, unsigned int start, size_t len);
+char	*ft_strcat(char *dest, char *src);
 char	*ft_strchr(const char *s, int c);
 char	*ft_strdup(char *src);
+char	*ft_strjoin(char const *s1, char const *s2);
 char	*ft_strnstr(const char *big, const char *little, size_t len);
 char	*ft_strrchr(const char *str, int c);
 int		ft_atoi(const char *nptr);
