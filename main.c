@@ -9,7 +9,7 @@
 int main () {
    //test variables 
    
-   
+   /*
    char str[50];
    char s = '7';
    int n = 7;
@@ -449,9 +449,17 @@ int main () {
    printf("output: |%s|\n", ft_strjoin("42\t\0", "SP\t"));
    printf("\n************************************\n");
 
-
-
    // =========================function===================
+   */
+   char *ft_fdest2;  
+   char t1[] = "hello";
+   char t2[] = "h";
+   printf("\nft_strtrim:\n");
+   ft_fdest2 = ft_strtrim("c4c2c Sãco Paucloc", "c");
+   //ft_fdest2 = ft_strtrim(t1, t2);
+   printf("output: |%s|\n", ft_fdest2);
+
+
    // =========================function===================
    // =========================function===================
    // =========================function===================
