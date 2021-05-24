@@ -12,6 +12,7 @@ char	*ft_strdup(char *src);
 char	*ft_strjoin(char const *s1, char const *s2);
 char	*ft_strnstr(const char *big, const char *little, size_t len);
 char	*ft_strrchr(const char *str, int c);
+char	*ft_strtrim(char const *s1, char const *set);
 char	*ft_strtrim2(char const *s1, char const *set);
 int		ft_atoi(const char *nptr);
 int		ft_isalnum(int c);

@@ -1,29 +1,37 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_strtrim.c                                       :+:      :+:    :+:   */
+/*   ft_strtrim2.c                                      :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: gantonio <gantonio@student.42sp.org.br>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2021/05/24 15:41:43 by gantonio          #+#    #+#             */
-/*   Updated: 2021/05/24 15:49:34 by gantonio         ###   ########.fr       */
+/*   Created: 2021/05/22 21:40:47 by gantonio          #+#    #+#             */
+/*   Updated: 2021/05/24 15:41:20 by gantonio         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-char	*ft_strtrim(char const *s1, char const *set)
+char	*ft_strtrim2(char const *s1, char const *set)
 {
-	size_t		size;
-	char		*ptr;
+	char	*ptr;
+	size_t	i;
+	size_t	c;
 
-	size = ft_strlen(s1);
-	if (!s1 || !set)
+	i = 0;
+	c = 0;
+	ptr = malloc(sizeof(char));
+	if (!ptr || !s1)
 		return (NULL);
-	while (*s1 && ft_strchr(set, *s1))
-		s1++;
-	while (size && ft_strchr(set, s1[size]))
-		size--;
-	ptr = ft_substr((char*)s1, 0, size + 1);
+	while (s1[c])
+	{
+		if (s1[c] != *set)
+		{
+			ptr[i] = s1[c];
+			i++;
+		}
+		c++;
+	}
+	ptr[i] = '\0';
 	return (ptr);
 }

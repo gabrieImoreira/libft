@@ -452,10 +452,10 @@ int main () {
    // =========================function===================
    */
    char *ft_fdest2;  
-   char t1[] = "42c Scãco Paculco";
-   char t2[] = "c";
+   char t1[] = "ce42 São Pauloce";
+   char t2[] = "ce";
    printf("\nft_strtrim:\n");
-   ft_fdest2 = ft_strtrim2(t1, t2);
+   ft_fdest2 = ft_strtrim(t1, t2);
    //ft_fdest2 = ft_strtrim(t1, t2);
    printf("output: |%s|\n", ft_fdest2);
 
