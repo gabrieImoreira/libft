@@ -6,7 +6,7 @@
 /*   By: gantonio <gantonio@student.42sp.org.br>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/05/24 15:41:43 by gantonio          #+#    #+#             */
-/*   Updated: 2021/05/24 15:49:34 by gantonio         ###   ########.fr       */
+/*   Updated: 2021/05/24 16:00:29 by gantonio         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -24,6 +24,6 @@ char	*ft_strtrim(char const *s1, char const *set)
 		s1++;
 	while (size && ft_strchr(set, s1[size]))
 		size--;
-	ptr = ft_substr((char*)s1, 0, size + 1);
+	ptr = ft_substr((char *)s1, 0, size + 1);
 	return (ptr);
 }
