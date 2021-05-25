@@ -6,11 +6,18 @@
 /*   By: gantonio <gantonio@student.42sp.org.br>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/05/24 16:09:06 by gantonio          #+#    #+#             */
-/*   Updated: 2021/05/24 21:48:26 by gantonio         ###   ########.fr       */
+/*   Updated: 2021/05/25 16:56:04 by gantonio         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
+
+static int	ft_init(int *x, int *y)
+{
+	*x = 0;
+	*y = -1;
+	return (0);
+}
 
 char	**ft_array(const char *str, char c)
 {
@@ -34,12 +41,12 @@ char	**ft_array(const char *str, char c)
 	return (arr);
 }
 
-static	char	**ft_free(char **str, int count)
+static	char	**ft_free(char **str, int counter)
 {
 	int	i;
 
 	i = 0;
-	while (i < count + 1)
+	while (i < counter + 1)
 		free(str[i++]);
 	free(str);
 	return (NULL);
@@ -47,15 +54,14 @@ static	char	**ft_free(char **str, int count)
 
 char	**ft_split(char const *s, char c)
 {
-	char	**str;
-	int		count;
+	char	**ptr;
+	int		counter;
 	int		i;
 	int		b;
 
-	count = 0;
-	i = -1;
-	str = ft_array(s, c);
-	if (!s || !str)
+	ft_init(&counter, &i);
+	ptr = ft_array(s, c);
+	if (!s || !ptr)
 		return (NULL);
 	while (s[++i] != '\0')
 	{
@@ -64,13 +70,13 @@ char	**ft_split(char const *s, char c)
 			b++;
 		if (b > i)
 		{
-			str[count] = (char *)malloc(sizeof(char) * (b - i + 1));
-			if (!str[count])
-				return (ft_free(str, count));
-			ft_strlcpy(str[count++], s + i, b - i + 1);
+			ptr[counter] = (char *)malloc(sizeof(char) * (b - i + 1));
+			if (!ptr[counter])
+				return (ft_free(ptr, counter));
+			ft_strlcpy(ptr[counter++], s + i, b - i + 1);
 			i = b - 1;
 		}
 	}
-	str[count] = 0;
-	return (str);
+	ptr[counter] = 0;
+	return (ptr);
 }

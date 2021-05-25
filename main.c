@@ -9,7 +9,7 @@
 int main () {
    //test variables 
    
-   /*
+   
    char str[50];
    char s = '7';
    int n = 7;
@@ -459,7 +459,7 @@ int main () {
    //ft_fdest2 = ft_strtrim(t1, t2);
    printf("output: |%s|\n", ft_fdest2);
    printf("\n************************************\n");
-    */
+    
    // =========================function===================
    
    char **ft01;
