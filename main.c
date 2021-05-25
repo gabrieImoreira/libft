@@ -458,14 +458,16 @@ int main () {
    ft_fdest2 = ft_strtrim(t1, t2);
    //ft_fdest2 = ft_strtrim(t1, t2);
    printf("output: |%s|\n", ft_fdest2);
+   printf("\n************************************\n");
     */
    // =========================function===================
    
    char **ft01;
+   printf("\nft_split:\n");
    ft01 = ft_split("lapis,lapizeira,borracha,papel", ',');
-  // for(int i = 0; ft01[i] != 0; i++)
-      printf("|%s|\n", ft01[0]);
-   //printf("\n");
+   for(int i = 0; ft01[i] != 0; i++)
+      printf("|%s|\n", ft01[i]);
+   printf("\n************************************\n");
 
 
    // =========================function===================
