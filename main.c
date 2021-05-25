@@ -9,7 +9,7 @@
 int main () {
    //test variables 
    
-   
+   /*
    char str[50];
    char s = '7';
    int n = 7;
@@ -468,9 +468,17 @@ int main () {
    for(int i = 0; ft01[i] != 0; i++)
       printf("|%s|\n", ft01[i]);
    printf("\n************************************\n");
-
-
    // =========================function===================
+   */
+   printf("\nft_itoa:\n");
+   printf("output: %s\n", ft_itoa(12345678));
+   printf("output: %s\n", ft_itoa(-+-+-+923456789));
+   printf("output: %s\n", ft_itoa(-0));
+   printf("output: %s\n", ft_itoa(-+2147483647));
+   printf("\n************************************\n");
+   
+
+  
    // =========================function===================
    // =========================function===================
    // =========================function===================
