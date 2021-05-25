@@ -9,7 +9,7 @@
 int main () {
    //test variables 
    
-   /*
+   
    char str[50];
    char s = '7';
    int n = 7;
@@ -450,7 +450,7 @@ int main () {
    printf("\n************************************\n");
 
    // =========================function===================
-   */
+  
    char *ft_fdest2;  
    char t1[] = "ce42 São Pauloce";
    char t2[] = "ce";
@@ -458,9 +458,18 @@ int main () {
    ft_fdest2 = ft_strtrim(t1, t2);
    //ft_fdest2 = ft_strtrim(t1, t2);
    printf("output: |%s|\n", ft_fdest2);
-
-
+   printf("\n************************************\n");
+    
    // =========================function===================
+   
+   char **ft01;
+   printf("\nft_split:\n");
+   ft01 = ft_split("lapis,lapizeira,borracha,papel", ',');
+   for(int i = 0; ft01[i] != 0; i++)
+      printf("|%s|\n", ft01[i]);
+   printf("\n************************************\n");
+
+
    // =========================function===================
    // =========================function===================
    // =========================function===================
