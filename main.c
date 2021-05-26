@@ -5,11 +5,16 @@
 #include <ctype.h>
 #include "src/libft.h"
 
+   char my_func(unsigned int i, char str)
+   {
+   	printf("My inner function: index = %d and %c\n", i, str);
+   	return str - 32;
+   }
 
 int main () {
    //test variables 
    
-   /*
+   
    char str[50];
    char s = '7';
    int n = 7;
@@ -469,7 +474,7 @@ int main () {
       printf("|%s|\n", ft01[i]);
    printf("\n************************************\n");
    // =========================function===================
-   */
+   
    printf("\nft_itoa:\n");
    printf("output: %s\n", ft_itoa(12345678));
    printf("output: %s\n", ft_itoa(-+-+-+923456789));
@@ -478,21 +483,14 @@ int main () {
    printf("\n************************************\n");
    // =========================function===================
 
-   char my_func(unsigned int i, char str)
-   {
-      printf("My inner function: index = %d and %c\n", i, str);
-      return str - 32;
-   }
-   
    printf("\nft_strmapi:\n");
-   char var_strmapi[] = "teste";
-   char str[10] = "hello.";
-   printf("The result is %s\n", str);
-   char *result = ft_strmapi(str, my_func);
-	printf("The result is %s\n", result);
-   
-
+   char str_mapi[10] = "hello";
+   printf("\nThe result is %s\n", str_mapi);
+   char *result = ft_strmapi(str_mapi, my_func);
+   printf("The result is %s\n", result);
+   printf("\n************************************\n");
    // =========================function===================
+
    // =========================function===================
    // =========================function===================
    // =========================function===================

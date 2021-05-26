@@ -6,7 +6,7 @@
 /*   By: gantonio <gantonio@student.42sp.org.br>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/05/25 20:59:53 by gantonio          #+#    #+#             */
-/*   Updated: 2021/05/25 21:29:36 by gantonio         ###   ########.fr       */
+/*   Updated: 2021/05/26 16:22:28 by gantonio         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,16 +14,21 @@
 
 char *ft_strmapi(char const *s, char (*f)(unsigned int, char))
 {
-	size_t counter;
+
 	char *ptr;
-	counter = ft_strlen(s);
-	ptr = malloc(sizeof(char) * (counter + 1));
+	size_t i;
+
+	i = 0;
+	if (!s)
+		return (NULL);
+	ptr = malloc(sizeof(char) * (ft_strlen(s) + 1));
 	if (!ptr)
 		return (NULL);
-	while (counter > 0)
+	while (s[i] != '\0')
 	{
-		ptr[counter] = f(counter, s[counter]);
-		counter--;
+		ptr[i] = f(i, s[i]);
+		i++;
 	}
+	ptr[i] = '\0';
 	return(ptr);
 }
