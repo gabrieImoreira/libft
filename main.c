@@ -503,6 +503,7 @@ int main () {
    ft_putstr_fd(c, 1);
    ft_putstr_fd("\n", 1);
    ft_putstr_fd("- Jamie Zawinski", 1);
+   ft_putstr_fd("", 1);
    printf("\n\n************************************\n");
    // =========================function===================
 
