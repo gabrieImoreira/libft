@@ -5,6 +5,11 @@
 #include <ctype.h>
 #include "src/libft.h"
 
+   char my_func(unsigned int i, char str)
+   {
+   	printf("My inner function: index = %d and %c\n", i, str);
+   	return str - 32;
+   }
 
 int main () {
    //test variables 
@@ -468,11 +473,24 @@ int main () {
    for(int i = 0; ft01[i] != 0; i++)
       printf("|%s|\n", ft01[i]);
    printf("\n************************************\n");
+   // =========================function===================
+   
+   printf("\nft_itoa:\n");
+   printf("output: %s\n", ft_itoa(12345678));
+   printf("output: %s\n", ft_itoa(-+-+-+923456789));
+   printf("output: %s\n", ft_itoa(-0));
+   printf("output: %s\n", ft_itoa(-+2147483647));
+   printf("\n************************************\n");
+   // =========================function===================
 
+   printf("\nft_strmapi:\n");
+   char str_mapi[10] = "hello";
+   printf("\nThe result is %s\n", str_mapi);
+   char *result = ft_strmapi(str_mapi, my_func);
+   printf("The result is %s\n", result);
+   printf("\n************************************\n");
+   // =========================function===================
 
-   // =========================function===================
-   // =========================function===================
-   // =========================function===================
    // =========================function===================
    // =========================function===================
    // =========================function===================
