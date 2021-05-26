@@ -14,7 +14,7 @@
 int main () {
    //test variables 
    
-   
+   /*
    char str[50];
    char s = '7';
    int n = 7;
@@ -490,9 +490,25 @@ int main () {
    printf("The result is %s\n", result);
    printf("\n************************************\n");
    // =========================function===================
+   
+   printf("\nft_putchar_fd:\n\n");
+   char c = '4';
+   ft_putchar_fd(c, 1);
+   ft_putchar_fd('2', 1);
+   printf("\n\n************************************\n");
+   // =========================function===================
+   */
+   printf("\nft_putstr_fd:\n\n");
+   char *c = "Linux is only free if your time has no value.";
+   ft_putstr_fd(c, 1);
+   ft_putstr_fd("\n", 1);
+   ft_putstr_fd("- Jamie Zawinski", 1);
+   ft_putstr_fd("", 1);
+   printf("\n\n************************************\n");
+   // =========================function===================
 
    // =========================function===================
-   // =========================function===================
-   // =========================function===================
+
+   
    return(0);
 }
