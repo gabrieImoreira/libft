@@ -476,10 +476,22 @@ int main () {
    printf("output: %s\n", ft_itoa(-0));
    printf("output: %s\n", ft_itoa(-+2147483647));
    printf("\n************************************\n");
+   // =========================function===================
+
+   char my_func(unsigned int i, char str)
+   {
+      printf("My inner function: index = %d and %c\n", i, str);
+      return str - 32;
+   }
+   
+   printf("\nft_strmapi:\n");
+   char var_strmapi[] = "teste";
+   char str[10] = "hello.";
+   printf("The result is %s\n", str);
+   char *result = ft_strmapi(str, my_func);
+	printf("The result is %s\n", result);
    
 
-  
-   // =========================function===================
    // =========================function===================
    // =========================function===================
    // =========================function===================
