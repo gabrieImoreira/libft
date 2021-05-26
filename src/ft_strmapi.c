@@ -6,17 +6,16 @@
 /*   By: gantonio <gantonio@student.42sp.org.br>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/05/25 20:59:53 by gantonio          #+#    #+#             */
-/*   Updated: 2021/05/26 16:22:28 by gantonio         ###   ########.fr       */
+/*   Updated: 2021/05/26 16:24:44 by gantonio         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-char *ft_strmapi(char const *s, char (*f)(unsigned int, char))
+char	*ft_strmapi(char const *s, char (*f)(unsigned int, char))
 {
-
-	char *ptr;
-	size_t i;
+	char	*ptr;
+	size_t	i;
 
 	i = 0;
 	if (!s)
@@ -30,5 +29,5 @@ char *ft_strmapi(char const *s, char (*f)(unsigned int, char))
 		i++;
 	}
 	ptr[i] = '\0';
-	return(ptr);
+	return (ptr);
 }
