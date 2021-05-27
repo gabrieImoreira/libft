@@ -497,16 +497,39 @@ int main () {
    ft_putchar_fd('2', 1);
    printf("\n\n************************************\n");
    // =========================function===================
-   */
+   
    printf("\nft_putstr_fd:\n\n");
-   char *c = "Linux is only free if your time has no value.";
-   ft_putstr_fd(c, 1);
+   char *ft_c = "Linux is only free if your time has no value.";
+   ft_putstr_fd(ft_c, 1);
    ft_putstr_fd("\n", 1);
    ft_putstr_fd("- Jamie Zawinski", 1);
    ft_putstr_fd("", 1);
    printf("\n\n************************************\n");
    // =========================function===================
 
+   printf("\nft_putendl_fd:\n\n");
+   char *var_pstr = "Linux is only free if your time has no value.";
+   ft_putendl_fd(var_pstr, 1);
+   ft_putendl_fd("- Jamie Zawinski", 1);
+   ft_putendl_fd("", 1);
+   printf("\n************************************\n");
+
+   // =========================function===================
+   */
+   printf("\nft_putendl_fd:\n");
+   printf("\noutput:\n");
+   ft_putnbr_fd(42, 1);
+   ft_putstr_fd("\n", 1);
+   ft_putnbr_fd(0, 1);
+   ft_putstr_fd("\n", 1);
+   ft_putnbr_fd(-8, 1);
+   ft_putstr_fd("\n", 1);
+   ft_putnbr_fd(-2147483648, 1);
+   printf("\n\n************************************\n");
+   // =========================function===================
+   // =========================function===================
+   // =========================function===================
+   // =========================function===================
    // =========================function===================
 
    
