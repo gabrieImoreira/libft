@@ -6,7 +6,7 @@
 /*   By: gantonio <gantonio@student.42sp.org.br>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/05/22 19:18:11 by gantonio          #+#    #+#             */
-/*   Updated: 2021/05/22 21:24:25 by gantonio         ###   ########.fr       */
+/*   Updated: 2021/05/27 20:46:49 by gantonio         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -20,7 +20,7 @@ char	*ft_strjoin(char const *s1, char const *s2)
 
 	i = 0;
 	c = 0;
-	ptr = malloc(sizeof(char));
+	ptr = malloc(ft_strlen(s1) + ft_strlen(s2) + 1);
 	if (!ptr || !s1 || !s2)
 		return (NULL);
 	while (s1[i])

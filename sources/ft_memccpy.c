@@ -6,7 +6,7 @@
 /*   By: gantonio <gantonio@student.42sp.org.br>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/05/17 19:35:44 by gantonio          #+#    #+#             */
-/*   Updated: 2021/05/17 20:45:34 by gantonio         ###   ########.fr       */
+/*   Updated: 2021/05/27 19:55:44 by gantonio         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -25,7 +25,7 @@ void	*ft_memccpy(void *dest, const void *src, int c, size_t len)
 	{
 		ptr_dest[i] = ptr_src[i];
 		if (ptr_src[i] == (unsigned char)c)
-			return (dest + i++);
+			return (dest + i + 1);
 		i++;
 	}
 	return (NULL);
