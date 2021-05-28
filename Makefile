@@ -6,11 +6,12 @@
 #    By: gantonio <gantonio@student.42sp.org.br>    +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2021/05/20 17:59:10 by gantonio          #+#    #+#              #
-#    Updated: 2021/05/27 19:18:49 by gantonio         ###   ########.fr        #
+#    Updated: 2021/05/27 22:03:02 by gantonio         ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
 FLAGS =	-Wall -Wextra -Werror
+
 INC_DIR = includes
 SRC_DIR = sources
 CC =	gcc
