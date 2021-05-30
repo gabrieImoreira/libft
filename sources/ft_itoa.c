@@ -6,11 +6,18 @@
 /*   By: gantonio <gantonio@student.42sp.org.br>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/05/25 17:04:40 by gantonio          #+#    #+#             */
-/*   Updated: 2021/05/27 22:53:20 by gantonio         ###   ########.fr       */
+/*   Updated: 2021/05/30 12:52:42 by gantonio         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
+
+static int	ft_signal(int n)
+{
+	if (n < 0)
+		return (-1);
+	return (1);
+}
 
 static int	ft_len(int n)
 {
@@ -35,13 +42,9 @@ char	*ft_itoa(int n)
 	long	n2;
 
 	n2 = n;
-	status = 1;
+	status = ft_signal(n2);
+	n2 *= status;
 	i = ft_len(n);
-	if (n2 < 0)
-	{
-		n2 *= -1;
-		status = 0;
-	}
 	ptr = malloc(sizeof(char) * (i + 1));
 	if (!ptr)
 		return (NULL);
@@ -53,7 +56,7 @@ char	*ft_itoa(int n)
 		ptr[i--] = (n2 % 10) + '0';
 		n2 /= 10;
 	}
-	if (status == 0)
+	if (status == -1)
 		ptr[i] = '-';
 	return (ptr);
 }
