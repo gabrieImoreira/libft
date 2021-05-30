@@ -6,7 +6,7 @@
 /*   By: gantonio <gantonio@student.42sp.org.br>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/05/24 16:09:06 by gantonio          #+#    #+#             */
-/*   Updated: 2021/05/25 16:56:04 by gantonio         ###   ########.fr       */
+/*   Updated: 2021/05/30 12:38:02 by gantonio         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -19,7 +19,7 @@ static int	ft_init(int *x, int *y)
 	return (0);
 }
 
-char	**ft_array(const char *str, char c)
+static char	**ft_array(const char *str, char c)
 {
 	char	**arr;
 	size_t	i;
@@ -41,7 +41,7 @@ char	**ft_array(const char *str, char c)
 	return (arr);
 }
 
-static	char	**ft_free(char **str, int counter)
+static char	**ft_free(char **str, int counter)
 {
 	int	i;
 
