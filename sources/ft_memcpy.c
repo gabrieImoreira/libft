@@ -6,7 +6,7 @@
 /*   By: gantonio <gantonio@student.42sp.org.br>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/05/17 15:36:35 by gantonio          #+#    #+#             */
-/*   Updated: 2021/05/17 17:55:31 by gantonio         ###   ########.fr       */
+/*   Updated: 2021/05/31 19:42:18 by gantonio         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -20,10 +20,8 @@ void	*ft_memcpy(void *dest, const void *src, size_t len)
 
 	ptr_dest = dest;
 	ptr_src = src;
-	if (!ptr_dest || !ptr_src)
-		return (NULL);
 	i = 0;
-	while (i < len)
+	while (i < len && (dest != NULL || src != NULL))
 	{
 		ptr_dest[i] = ptr_src[i];
 		i++;

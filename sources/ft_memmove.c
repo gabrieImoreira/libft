@@ -6,7 +6,7 @@
 /*   By: gantonio <gantonio@student.42sp.org.br>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/05/17 20:55:34 by gantonio          #+#    #+#             */
-/*   Updated: 2021/05/17 23:34:10 by gantonio         ###   ########.fr       */
+/*   Updated: 2021/05/31 19:30:56 by gantonio         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -21,6 +21,8 @@ void	*ft_memmove(void *dest, const void *src, size_t len)
 	ptr_dest = dest;
 	ptr_src = src;
 	i = 0;
+	if (dest == NULL && src == NULL)
+		return (NULL);
 	if (ptr_dest > ptr_src)
 		while (len-- > 0)
 			ptr_dest[len] = ptr_src[len];
