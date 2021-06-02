@@ -4,6 +4,12 @@
 # include <unistd.h>
 # include <stdlib.h>
 
+typedef struct	s_list
+{
+	void			*content;
+	struct s_list	*next;
+}				t_list;
+
 char	*ft_itoa(int n);
 char	*ft_strcpy(char *dest, char *src);
 char	*ft_substr(char const *s, unsigned int start, size_t len);
