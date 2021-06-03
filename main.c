@@ -533,10 +533,10 @@ int main () {
 	t_list	*elem;
    printf("\nft_lstnew:\n");
 	elem = ft_lstnew((void *)str_a);
-	printf("\n%s\n", elem->content);
+	printf("%s\n", elem->content);
    printf("\n************************************\n");
  // =========================function===================
- printf("\nft_lstlast:\n");
+   printf("\nft_lstlast:\n");
 	t_list	*elem1;
 	t_list	*elem2;
 	t_list	*elem3;
@@ -567,8 +567,38 @@ int main () {
 
 	elem6->content = (void *)str_a;
 	ret = ft_lstlast(elem1);
-	printf("\n%s\n", (char *)ret->content);
+	printf("%s\n", (char *)ret->content);
+   printf("\n************************************\n");
+   
  // =========================function===================
+   printf("\nft_lstadd_back:\n");
+   t_list	*t_elem1;
+	t_list	*t_elem2;
+	t_list	*t_elem3;
+	t_list	*t_elem4;
+   size_t sizef;
+
+	if(!(t_elem1 = malloc(sizeof(t_list))))
+		return (0);
+	if(!(t_elem2 = malloc(sizeof(t_list))))
+		return (0);
+	if(!(t_elem3 = malloc(sizeof(t_list))))
+		return (0);
+   if(!(t_elem4 = malloc(sizeof(t_list))))
+		return (0);
+
+   t_elem1->next = t_elem2;
+	t_elem2->next = t_elem3;
+   
+   sizef = ft_lstsize(t_elem1);
+   printf("\n%d\n", sizef);
+
+   t_elem4->next = NULL;
+   ft_lstadd_back(elem1, t_elem4);
+   printf("%p\n", t_elem2->next);
+   printf("%p\n", t_elem3->next);
+   printf("\n************************************\n");
+
  // =========================function===================
    // =========================function===================
 
