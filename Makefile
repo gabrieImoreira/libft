@@ -6,7 +6,7 @@
 #    By: gantonio <gantonio@student.42sp.org.br>    +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2021/05/20 17:59:10 by gantonio          #+#    #+#              #
-#    Updated: 2021/06/03 17:22:21 by gantonio         ###   ########.fr        #
+#    Updated: 2021/06/03 17:37:57 by gantonio         ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -33,6 +33,7 @@ SRC_FILES =	ft_atoi.c \
 			ft_lstclear.c \
 			ft_lstdelone.c \
 			ft_lstlast.c \
+			ft_lstmap.c \
 			ft_lstsize.c \
 			ft_lstiter.c  \
 			ft_memccpy.c \

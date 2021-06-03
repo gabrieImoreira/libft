@@ -15,7 +15,7 @@ int main () {
    //test variables 
    
    
-   /*char str[50];
+   char str[50];
    char s = '7';
    int n = 7;
 
@@ -527,7 +527,7 @@ int main () {
    ft_putnbr_fd(-8, 1);
    ft_putstr_fd("\n", 1);
    ft_putnbr_fd(-2147483648, 1);
-   printf("\n\n************************************\n"); */
+   printf("\n\n************************************\n"); 
    // =========================function===================
 	char	str_a[] = "42 São Paulo";
 	t_list	*elem;
@@ -543,7 +543,7 @@ int main () {
 	t_list	*elem4;
 	t_list	*elem5;
 	t_list	*elem6;
-	t_list	*ret;
+	t_list	*ret1;
 
 	if(!(elem1 = malloc(sizeof(t_list))))
 		return (0);
@@ -566,8 +566,8 @@ int main () {
 	elem6->next = NULL;
 
 	elem6->content = (void *)str_a;
-	ret = ft_lstlast(elem1);
-	printf("%s\n", (char *)ret->content);
+	ret1 = ft_lstlast(elem1);
+	printf("%s\n", (char *)ret1->content);
    printf("\n************************************\n");
    
  // =========================function===================
