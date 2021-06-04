@@ -6,7 +6,7 @@
 /*   By: gantonio <gantonio@student.42sp.org.br>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/06/01 22:50:53 by gantonio          #+#    #+#             */
-/*   Updated: 2021/06/04 18:32:08 by gantonio         ###   ########.fr       */
+/*   Updated: 2021/06/04 18:37:04 by gantonio         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -19,7 +19,7 @@ t_list	*ft_lstnew(void *content)
 	new = malloc(sizeof(t_list *) * 1);
 	if (!new)
 		return (NULL);
-	(*new).content = content;
-	(*new).next = NULL;
+	new->content = content;
+	new->next = NULL;
 	return (new);
 }
