@@ -6,7 +6,7 @@
 #    By: gantonio <gantonio@student.42sp.org.br>    +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2021/05/20 17:59:10 by gantonio          #+#    #+#              #
-#    Updated: 2021/06/04 18:32:24 by gantonio         ###   ########.fr        #
+#    Updated: 2021/06/06 10:21:39 by gantonio         ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -28,15 +28,6 @@ SRC_FILES =	ft_atoi.c \
 			ft_isprint.c \
 			ft_isupper.c \
 			ft_itoa.c \
-			ft_lstadd_back.c \
-			ft_lstadd_front.c \
-			ft_lstclear.c \
-			ft_lstdelone.c \
-			ft_lstlast.c \
-			ft_lstmap.c \
-			ft_lstnew.c \
-			ft_lstsize.c \
-			ft_lstiter.c  \
 			ft_memccpy.c \
 			ft_memchr.c \
 			ft_memcmp.c \
@@ -48,7 +39,6 @@ SRC_FILES =	ft_atoi.c \
 			ft_putnbr_fd.c \
 			ft_putstr_fd.c \
 			ft_split.c \
-			ft_strcat.c \
 			ft_strchr.c \
 			ft_strcpy.c \
 			ft_strdup.c \
@@ -66,6 +56,11 @@ SRC_FILES =	ft_atoi.c \
 			ft_substr.c \
 			ft_tolower.c \
 			ft_toupper.c 
+
+BONUS			=	ft_lstadd_back.c ft_lstadd_front.c ft_lstclear.c \
+					ft_lstdelone.c ft_lstiter.c ft_lstlast.c \
+					ft_lstmap.c ft_lstnew.c ft_lstsize.c
+BONUS_OBJS		= $(BONUS:.c=.o)
 
 SRCS = $(addprefix $(SRC_DIR)/,$(SRC_FILES))
 
@@ -88,5 +83,9 @@ clean:
 fclean: clean
 	@rm -f $(NAME)
 	@echo "$(NAME) deleted"
+
+bonus:	
+	$(OBJS) $(BONUS_OBJS) $(NAME)
+	ar rcs $(NAME) $(OBJS) $(BONUS_OBJS)
 
 re: fclean all
