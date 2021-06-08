@@ -6,7 +6,7 @@
 /*   By: gantonio <gantonio@student.42sp.org.br>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/05/19 21:37:30 by gantonio          #+#    #+#             */
-/*   Updated: 2021/05/19 21:38:59 by gantonio         ###   ########.fr       */
+/*   Updated: 2021/06/07 23:24:31 by gantonio         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,7 +14,7 @@
 
 int	ft_toupper(int c)
 {
-	if (ft_islower(c))
+	if (c >= 97 && c <= 122)
 		return (c - 32);
 	return (c);
 }

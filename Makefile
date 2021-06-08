@@ -6,7 +6,7 @@
 #    By: gantonio <gantonio@student.42sp.org.br>    +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2021/05/20 17:59:10 by gantonio          #+#    #+#              #
-#    Updated: 2021/06/07 23:12:43 by gantonio         ###   ########.fr        #
+#    Updated: 2021/06/07 23:22:47 by gantonio         ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -22,9 +22,7 @@ SRCS =	ft_atoi.c \
 		ft_isalpha.c \
 		ft_isascii.c \
 		ft_isdigit.c \
-		ft_islower.c \
 		ft_isprint.c \
-		ft_isupper.c \
 		ft_itoa.c \
 		ft_memccpy.c \
 		ft_memchr.c \
