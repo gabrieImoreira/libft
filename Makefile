@@ -6,7 +6,7 @@
 #    By: gantonio <gantonio@student.42sp.org.br>    +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2021/05/20 17:59:10 by gantonio          #+#    #+#              #
-#    Updated: 2021/06/06 10:21:39 by gantonio         ###   ########.fr        #
+#    Updated: 2021/06/07 23:00:20 by gantonio         ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -89,3 +89,5 @@ bonus:
 	ar rcs $(NAME) $(OBJS) $(BONUS_OBJS)
 
 re: fclean all
+
+.PHONY: fclean clean re test all
