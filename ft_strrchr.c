@@ -1,37 +1,26 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_strtrim2.c                                      :+:      :+:    :+:   */
+/*   ft_strrchr.c                                       :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: gantonio <gantonio@student.42sp.org.br>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2021/05/22 21:40:47 by gantonio          #+#    #+#             */
-/*   Updated: 2021/05/24 15:41:20 by gantonio         ###   ########.fr       */
+/*   Created: 2021/05/18 22:08:52 by gantonio          #+#    #+#             */
+/*   Updated: 2021/06/05 00:58:54 by gantonio         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-char	*ft_strtrim2(char const *s1, char const *set)
+char	*ft_strrchr(const char *str, int c)
 {
-	char	*ptr;
 	size_t	i;
-	size_t	c;
 
-	i = 0;
-	c = 0;
-	ptr = malloc(sizeof(char));
-	if (!ptr || !s1)
-		return (NULL);
-	while (s1[c])
+	i = ft_strlen(str) + 1;
+	while (i--)
 	{
-		if (s1[c] != *set)
-		{
-			ptr[i] = s1[c];
-			i++;
-		}
-		c++;
+		if (str[i] == (unsigned char)c)
+			return ((char *)str + i);
 	}
-	ptr[i] = '\0';
-	return (ptr);
+	return (NULL);
 }

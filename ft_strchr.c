@@ -1,24 +1,28 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_strdup.c                                        :+:      :+:    :+:   */
+/*   ft_strchr.c                                        :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: gantonio <gantonio@student.42sp.org.br>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2021/05/21 15:52:48 by gantonio          #+#    #+#             */
-/*   Updated: 2021/05/27 20:46:41 by gantonio         ###   ########.fr       */
+/*   Created: 2021/05/18 20:41:23 by gantonio          #+#    #+#             */
+/*   Updated: 2021/06/05 02:06:42 by gantonio         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-char	*ft_strdup(char *src)
+char	*ft_strchr(const char *str, int c)
 {
-	char	*dest;
+	size_t	i;
 
-	dest = malloc(sizeof(*src) * ft_strlen(src) + 1);
-	if (!dest)
-		return (NULL);
-	ft_strcpy(dest, src);
-	return (dest);
+	i = 0;
+	while (1)
+	{
+		if (str[i] == (unsigned char)c)
+			return ((char *)str + i);
+		if (!str[i])
+			return (NULL);
+		i++;
+	}
 }

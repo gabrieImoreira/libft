@@ -1,27 +1,33 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_strcpy.c                                        :+:      :+:    :+:   */
+/*   ft_lstmap.c                                        :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: gantonio <gantonio@student.42sp.org.br>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2021/05/21 15:50:13 by gantonio          #+#    #+#             */
-/*   Updated: 2021/05/21 15:53:03 by gantonio         ###   ########.fr       */
+/*   Created: 2021/06/03 17:41:58 by gantonio          #+#    #+#             */
+/*   Updated: 2021/06/05 01:56:06 by gantonio         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-char	*ft_strcpy(char *dest, char *src)
+t_list	*ft_lstmap(t_list *lst, void *(*f)(void *), void (*del)(void *))
 {
-	int	i;
+	t_list	*new_lst;
+	t_list	*tmp;
 
-	i = 0;
-	while (src[i] != '\0')
+	new_lst = NULL;
+	while (lst)
 	{
-		dest[i] = src[i];
-		i++;
+		tmp = ft_lstnew(f(lst->content));
+		if (!tmp)
+		{
+			ft_lstclear(&new_lst, del);
+			return (NULL);
+		}
+		ft_lstadd_back(&new_lst, tmp);
+		lst = lst->next;
 	}
-	dest[i] = '\0';
-	return (dest);
+	return (new_lst);
 }

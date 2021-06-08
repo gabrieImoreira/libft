@@ -11,7 +11,6 @@ typedef struct s_list
 }				t_list;
 
 char	*ft_itoa(int n);
-char	*ft_strcpy(char *dest, char *src);
 char	*ft_substr(char const *s, unsigned int start, size_t len);
 char	*ft_strchr(const char *s, int c);
 char	*ft_strdup(char *src);
@@ -20,7 +19,6 @@ char	*ft_strmapi(char const *s, char (*f)(unsigned int, char));
 char	*ft_strnstr(const char *big, const char *little, size_t len);
 char	*ft_strrchr(const char *str, int c);
 char	*ft_strtrim(char const *s1, char const *set);
-char	*ft_strtrim2(char const *s1, char const *set);
 char	**ft_split(char const *s, char c);
 int		ft_atoi(const char *nptr);
 int		ft_isalnum(int c);
