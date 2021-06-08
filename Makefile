@@ -6,7 +6,7 @@
 #    By: gantonio <gantonio@student.42sp.org.br>    +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2021/05/20 17:59:10 by gantonio          #+#    #+#              #
-#    Updated: 2021/06/07 23:22:47 by gantonio         ###   ########.fr        #
+#    Updated: 2021/06/08 16:56:51 by gantonio         ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -61,10 +61,10 @@ OBJS = $(SRCS:.c=.o)
 all: $(NAME)
 
 bonus:	$(BONUS_OBJS) $(NAME)
-		@ar rcs $(NAME) $(OBJS) $(BONUS_OBJS)
+		@ar rcs $(NAME) $^
 	
 $(NAME): $(OBJS)
-	@ar rcs $(NAME) $?
+	@ar rcs $@ $^
 	@echo "$(NAME) created"
 
 %.o: %.c
@@ -72,8 +72,7 @@ $(NAME): $(OBJS)
 	@echo "$@ created from $<"
 
 clean:
-	@rm -f $(OBJS)
-	@rm -f ${BONUS_OBJS}
+	@rm -f $(OBJS) $(BONUS_OBJS)
 	@echo "OBJECTS deleted"
 
 fclean: clean
@@ -82,4 +81,4 @@ fclean: clean
 
 re: fclean all
 
-.PHONY: fclean clean re test all
+.PHONY: fclean clean re all
