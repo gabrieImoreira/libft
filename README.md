@@ -1,7 +1,7 @@
 # Libft - @42Born2Code
-<img src="https://github.com/vvarodi/libft_42/blob/master/Libft.JPG" />
+<img src="https://github.com/gabrieImoreira/libft/blob/main/archives/description-lib.png" />
 
-![Text](https://snipboard.io/DuJ8ON.jpg)
+![Text](https://github.com/gabrieImoreira/libft/blob/main/archives/notes.png)
 
 ### TOC
 * [What is libft?](#what-is-libft)
