@@ -116,15 +116,6 @@ Description | Param. #1 | Return Values
 :-----------: | :-----------: | :-----------:
 Duplicate string s1. Memory  for  the new string is obtained with malloc, and can  be  freed with free | The string to duplicate| A pointer   to  the  duplicated  string.  NULL  if  insufficient  memory  was available
 
-
-## [ft_strchr](libft/ft_strchr.c)
-
-`char		*ft_strchr(const char *s, int c)`
-
-Description | Param. #1 | Param. #2 | Return Value
-:-----------: | :-----------: | :-----------: | :-----------:
-Locates the first occurrence of 'c' in the string pointed to by 's'. The terminating null character is considered to be part of the string, therefore if 'c' is '\0', locates the terminating '\0'| Pointer to string | Character to be located | A pointer to the first occurrence of the character c in the string or NULL if the character is not found
-
 ## [ft_strrchr](libft/ft_strrchr.c)
 
 `char		*ft_strrchr(const char *s, int c)`
@@ -149,14 +140,6 @@ Copies up to dstsize - 1 characters from the NUL-terminated string src to dst, N
 Description | Param. #1 | Param. #2 | Param. #3 | Return Value
 :-----------: | :-----------: | :-----------: | :-----------: | :-----------:
 Concatenate the string src to the end of dst. It will concatenate at most size - strlen(dst) - 1 bytes, NUL-terminating the result | Destination array | String to be appended to dst | Maximum number of characters to be appended | The initial length of dst plus the length of src
-
-## [ft_strstr](libft/ft_strstr.c)
-
-`char       *ft_strstr(const char *haystack, const char *needle)`
-
-Description | Param. #1 | Param. #2 | Return Value
-:-----------: | :-----------: | :-----------: | :-----------:
-Locate substring. Finds the first occurrence of the substring 'needle' in  the  string 'haystack'. The terminating null bytes ('\0') are not compared | String to be scanned | The small string to be searched in haystack string | A pointer to the beginning of the located substring. NULL if the substring is not found. If 'needle' is an empty string, 'haystack' is returned
 
 ## [ft_strnstr](libft/ft_strnstr.c)
 
