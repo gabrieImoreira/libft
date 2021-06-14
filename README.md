@@ -269,3 +269,6 @@ Allocates (with malloc) and returns a string representing the integer received a
 Description | Param. #1 | Return Value
 :-----------: | :-----------: | :-----------:
  Checks for white-space characters. These are: space, form-feed ('\f'), newline ('\n'),  carriage  return('\r'), horizontal tab ('\t'), and vertical tab ('\v').| The character to test | 0 if the character tests false and 1 if the character tests true
+
+
+[1]: https://www.42sp.org.br/
